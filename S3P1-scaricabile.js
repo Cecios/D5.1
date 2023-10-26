@@ -54,13 +54,22 @@ console.log("Esercizio 4");
 let fraseTest = ""
 
 let upperFirst = function(frase){
+    let p = "", l 
     for (let i = 0; i < frase.length; i++) {
-        fraseTest += frase.toUpperCase();
-        console.log(fraseTest);
+        if (i === 0 || (frase.substr(i-1,1) === " ")) {
+                l = (frase.substr(i,1));
+                 p += l.toUpperCase();
+        }
+        else{
+            l = frase.substr(i,1);
+            p += l;
+            }
+        }
+             frase = p;
+             return frase
     }
-}
-upperFirst("")
 
+console.log(upperFirst("ciao mamma"));
 console.log("\n");
 //--------------------------------------------------------------------------
 /* ESERCIZIO 5
@@ -168,5 +177,6 @@ risultato = cutString("parola")
 console.log(risultato);
 //--------------------------------------------------------------------------
 console.log("\n");
+
 
 
